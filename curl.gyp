@@ -18,12 +18,11 @@
       'defines': [
         'USE_SSLEAY',
         'USE_IPV6',
-        'USE_LIBSSH2',
+        'HTTP_ONLY',
         'USE_ZLIB',
         'USE_WINDOWS_SSPI',
         'HAVE_SPNEGO',
         'HAVE_ZLIB_H',
-        'HAVE_LIBSSH2_H',
         'HAVE_ZLIB',
         'HAVE_LIBZ',
         'BUILDING_LIBCURL',
@@ -31,7 +30,6 @@
       'dependencies': [
         'openssl.gyp:openssl',
         'zlib.gyp:zlib',
-        'libssh2.gyp:libssh2'
       ],
       'direct_dependent_settings': {
         'conditions': [
@@ -167,7 +165,6 @@
             'link_settings': {
               'libraries': [
                 '-lws2_32.lib',
-                '-lwldap32.lib',
                 '-ladvapi32.lib',
               ],
             },
